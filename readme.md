@@ -2,7 +2,7 @@
 
 A personal portfolio website for **Manindra Nath Seth** — a Computer Science and Engineering student specializing in IoT, Cyber Security, and Blockchain Technology at Heritage Institute of Technology. Built entirely with vanilla HTML, CSS, and JavaScript, with a set of custom-converted animated backgrounds and hover effects.
 
-**Live GitHub repo:** [github.com/Manindra-NS/My-Portfolio](https://github.com/Manindra-NS/Portfolio.git)
+**Live GitHub repo:** [github.com/Manindra-NS/Portfolio](https://github.com/Manindra-NS/Portfolio.git)
 
 ---
 
