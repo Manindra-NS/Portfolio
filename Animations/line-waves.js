@@ -151,9 +151,9 @@ void main() {
  * @param {number} [options.edgeFadeWidth=0]
  * @param {number} [options.colorCycleSpeed=1]
  * @param {number} [options.brightness=0.2]
- * @param {string} [options.color1='#bdfaf0']
- * @param {string} [options.color2='#ade2ff']
- * @param {string} [options.color3='#fed3ff']
+ * @param {string} [options.color1='#ffffff']
+ * @param {string} [options.color2='#ffffff']
+ * @param {string} [options.color3='#ffffff']
  * @param {boolean} [options.enableMouseInteraction=true]
  * @param {number} [options.mouseInfluence=2]
  * @param {number} [options.opacity=1] - CSS opacity applied to the canvas (0-1), for dimming the whole effect
@@ -169,9 +169,9 @@ export function initLineWaves(container, options = {}) {
     edgeFadeWidth = 0.0,
     colorCycleSpeed = 1.0,
     brightness = 0.2,
-    color1 = '#bdfaf0',
-    color2 = '#ade2ff',
-    color3 = '#fed3ff',
+    color1 = '#ffffff',
+    color2 = '#ffffff',
+    color3 = '#ffffff',
     enableMouseInteraction = true,
     mouseInfluence = 2.0,
     opacity = 1
@@ -205,12 +205,26 @@ export function initLineWaves(container, options = {}) {
   }
 
   function resize() {
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    // window.innerWidth/innerHeight is used instead of the container's
+    // offsetWidth/offsetHeight: on mobile, measuring the container box
+    // can land slightly before the browser's UI chrome (address bar,
+    // etc.) settles into its final size, leaving the canvas locked to
+    // a too-small size with a visible gap at the bottom/right.
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    renderer.setSize(width, height);
+    // Explicitly re-sync the GPU viewport to the canvas' actual drawing
+    // buffer size. Without this, after a resize the canvas element can
+    // grow to fill the screen while the GPU keeps rendering into the
+    // old (smaller) region — showing up as a blank strip along the
+    // bottom/right, since that's the direction the canvas grew.
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     if (program) {
       program.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height];
     }
   }
   window.addEventListener('resize', resize);
+  window.addEventListener('orientationchange', resize);
   resize();
 
   const geometry = new Triangle(gl);
@@ -271,6 +285,7 @@ export function initLineWaves(container, options = {}) {
   return function dispose() {
     cancelAnimationFrame(animationFrameId);
     window.removeEventListener('resize', resize);
+    window.removeEventListener('orientationchange', resize);
     if (enableMouseInteraction) {
       window.removeEventListener('mousemove', handleMouseMove);
       document.documentElement.removeEventListener('mouseleave', handleMouseLeave);

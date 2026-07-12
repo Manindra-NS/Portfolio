@@ -337,10 +337,16 @@ function L() {
 
 function TouchStart(e) {
   if (e.touches.length > 0) {
-    e.preventDefault();
     A.x = e.touches[0].clientX;
     A.y = e.touches[0].clientY;
 
+    // Not calling e.preventDefault() here on purpose: the tracked
+    // element (the ball canvas) is a fullscreen background, so a
+    // "was this touch over a tracked element" check is always true
+    // for any tap anywhere on the page — including nav links — which
+    // means preventDefault() would still block their default tap
+    // behavior. This is a purely decorative background, so there's
+    // no need to swallow touch/scroll behavior at all.
     for (const [elem, t] of b) {
       const rect = elem.getBoundingClientRect();
       if (D(rect)) {
@@ -358,7 +364,6 @@ function TouchStart(e) {
 
 function TouchMove(e) {
   if (e.touches.length > 0) {
-    e.preventDefault();
     A.x = e.touches[0].clientX;
     A.y = e.touches[0].clientY;
 

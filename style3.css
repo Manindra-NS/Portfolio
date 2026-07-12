@@ -109,23 +109,15 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size:2rem;
     margin-left: 12px;
-    margin-top: 6px;
+    margin-top: 15px;
     text-shadow: none;
-    color:rgb(255, 234, 0)
-}
-#hello3{
-    font-family: 'Times New Roman', Times, serif;
-    font-size:1rem;
-    margin-left: 12px;
-    margin-top: 4px;
-    text-shadow: none;
-    color:rgb(207, 207, 207)
+    color:rgb(239, 255, 19)
 }
 .link{
     position: relative;
     color: skyblue;
-    font-size: 14px;
-    top:5px;
+    font-size: 1.2rem;
+    top:20px;
     left:10px;
 }
 @media (max-width: 1100px) {
@@ -184,26 +176,18 @@ body{
         color:rgb(187, 187, 187)
     }
     #hello2{
-    font-family: 'Times New Roman', Times, serif;
-    font-size:1.8rem;
-    margin-left: 10px;
-    margin-top: 8px;
-    text-shadow: none;
-    color:rgb(255, 234, 0)
-}
-    #hello3{
         font-family: 'Times New Roman', Times, serif;
-        font-size:1rem;
-        margin-left: 12px;
-        margin-top: 4px;
+        font-size:1.5rem;
+        margin-left: 10px;
+        margin-top: 15px;
         text-shadow: none;
-        color:rgb(207, 207, 207)
+        color:rgb(239, 255, 19)
     }
     .link{
         position: relative;
         color: skyblue;
-        font-size:0.6rem;
-        top:5px;
+        font-size:0.8rem;
+        top:17px;
         left:10px;
     }
 }
