@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(11, 2, 29);
+    color:antiquewhite;
+}
+.project-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+
+}
+#ferrofluid-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -9999;
+    pointer-events: none;
+}
+#prism-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -9999;
+    pointer-events: none;
+}
+.imgbox {
+    display: flex;
+    justify-content: right;
+    /* margin-left:vmin; */
+    width: 50%;
+    align-self: center;
+}
+
+.project-img {
+    width: 99%;
+    height: 90vmin;
+    padding-left:12vmin;
+    padding-top: 14vmin;
+}
+.img{
+    height:90vmin;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("pictures/document-hover.png");
+}
+
+.img:hover {
+    background-image: url("pictures/document.png");
+}
+
+.projectbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pro {
+    height: 120px;
+    width: 90vmin;
+    position: absolute;
+    /* background, border & border-radius are now handled by .border-glow-card
+       in border-glow.css (applied via project-init.js) */
+}
+
+.project1 {
+    top: 125px;
+    left: 10vmin;
+}
+
+.project2 {
+    top: 270px;
+    left: 10vmin;
+}
+
+.project3 {
+    top: 415px;
+    left: 10vmin;
+}
+
+.project4 {
+    top: 560px;
+    left: 10vmin;
+}
+
+.project5 {
+    top: 705px;
+    left: 10vmin;
+}
+#none{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2rem;
+    margin-left: 2px;
+    margin-top: 5.5vmin;
+    text-shadow: none;
+    color:rgb(187, 187, 187)
+}
+#see-more{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2rem;
+    margin-left: 20px;
+    margin-top: 5.5vmin;
+    text-shadow: none;
+    color:rgb(187, 187, 187)
+}
+#hello2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2rem;
+    margin-left: 12px;
+    margin-top: 6px;
+    text-shadow: none;
+    color:rgb(255, 234, 0)
+}
+#hello3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1rem;
+    margin-left: 12px;
+    margin-top: 4px;
+    text-shadow: none;
+    color:rgb(207, 207, 207)
+}
+.link{
+    position: relative;
+    color: skyblue;
+    font-size: 14px;
+    top:5px;
+    left:10px;
+}
+@media (max-width: 1100px) {
+    .project-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .imgbox {
+        position: absolute;
+        top: 900px;
+        width: 100%;
+    }
+
+    .project-img {
+        background-size: contain;
+        margin: 0px;
+        padding:0px;
+    }
+
+    .pro {
+        width: 80vmin;
+        align-self: center;
+    }
+
+    .project1 {
+        top: 125px;
+        /* left: 10vmin; */
+    }
+
+    .project2 {
+        top: 277px;
+        /* right: 10vmin; */
+    }
+
+    .project3 {
+        top: 430px;
+        /* left: 10vmin; */
+    }
+
+    .project4 {
+        top: 585px;
+        /* right: 10vmin; */
+    }
+
+    .project5 {
+        top: 740px;
+        /* left: 10vmin; */
+    }
+    #none{
+        font-family: 'Times New Roman', Times, serif;
+        font-size:2rem;
+        margin-left:0px;
+        margin-top: 13%;
+        text-shadow: none;
+        color:rgb(187, 187, 187)
+    }
+    #hello2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.8rem;
+    margin-left: 10px;
+    margin-top: 8px;
+    text-shadow: none;
+    color:rgb(255, 234, 0)
+}
+    #hello3{
+        font-family: 'Times New Roman', Times, serif;
+        font-size:1rem;
+        margin-left: 12px;
+        margin-top: 4px;
+        text-shadow: none;
+        color:rgb(207, 207, 207)
+    }
+    .link{
+        position: relative;
+        color: skyblue;
+        font-size:0.6rem;
+        top:5px;
+        left:10px;
+    }
+}

@@ -1,0 +1,361 @@
+.project-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+                  /* project fie*/
+
+.imgbox {
+    display: flex;
+    justify-content: center;
+    /* margin-left:vmin; */
+    width: 50%;
+    align-self: center;
+}
+#ball-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -9999;
+    pointer-events: none;
+}
+
+.project-img {
+    width: 99%;
+    height: 100vmin;
+    background-image: url("pictures/Profile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+    margin-left: 12vmin;
+
+}
+
+.project-img:hover {
+    background-image: url("pictures/project.png");
+}
+
+.projectbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pro {
+    height: 120px;
+    width: 46vmin;
+    position: absolute;
+    /* background, border & border-radius are now handled by .border-glow-card
+       in border-glow.css (applied via project-init.js) */
+}
+
+.project1 {
+    top: 125px;
+    left: 15vmin;
+}
+
+.project2 {
+    top: 350px;
+    left: 13vmin;
+}
+
+.project3 {
+    top: 600px;
+    left: 10vmin;
+}
+
+.project4 {
+    top: 125px;
+    right: 15vmin;
+}
+
+.project5 {
+    top: 350px;
+    right: 13vmin;
+}
+
+.project6 {
+    top: 600px;
+    right: 10vmin;
+}
+
+@media (max-width: 1100px) {
+    .imgbox {
+        position: absolute;
+        top: 1050px;
+        width: 80%;
+    }
+
+    .project-img {
+        background-size: cover;
+        margin: 0px;
+    }
+
+    .pro {
+        width: 65vmin;
+    }
+
+    .project1 {
+        top: 125px;
+        left: 10vmin;
+    }
+
+    .project4 {
+        top: 277px;
+        right: 10vmin;
+    }
+
+    .project2 {
+        top: 430px;
+        left: 10vmin;
+    }
+
+    .project5 {
+        top: 585px;
+        right: 10vmin;
+    }
+
+    .project3 {
+        top: 740px;
+        left: 10vmin;
+    }
+
+    .project6 {
+        top: 900px;
+        right: 10vmin;
+    }
+    .div4{
+        position: absolute;
+        left:160px;
+        top:600px;
+    }
+}
+#hello2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2rem;
+    margin-left: 12px;
+    margin-top: 6px;
+    text-shadow: none;
+    color:rgb(255, 234, 0)
+}
+#hello3{
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size:2rem; */
+    margin-left: 12px;
+    margin-top: 5px;
+    text-shadow: none;
+    color:rgb(207, 207, 207)
+}
+.link{
+    position: relative;
+    color: skyblue;
+    top:5px;
+    left:10px;
+}
+#none{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2rem;
+    margin-left:30%;
+    margin-top: 10%;
+    text-shadow: none;
+    color:rgb(187, 187, 187)
+}
+
+.div5{
+    position: absolute;
+    top:350px;
+    left: 900px;
+    width:60vmin;
+    height:60vmin;
+    z-index: -1;
+}
+.divcon{
+    background: radial-gradient(
+    circle,
+    rgba(255, 0, 132, 0.515) 0%,   /* center (darker) */
+    rgba(255, 0, 77, 0.185) 40%,
+    rgba(255, 0, 21, 0.2) 40%,
+    rgba(255, 0, 210, 0) 100%   /* fully transparent edges */
+  );
+    border: none;
+    border-radius: 50%;
+}
+
+                              /* Contact file */
+
+.contact-main{
+    display:flex;
+    flex-direction: row;
+}
+/* #color-bends-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -9999;
+    pointer-events: none;
+} */
+#line-waves-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -9999;
+    pointer-events: none;
+}
+.info{
+    width:60%;
+    height: 100vmin;
+}
+.alsovisit{
+    width:40%;
+    height: 100vmin;
+}
+.img2-box{
+    height:100%;
+    background-image: url("pictures/contact.png");
+    background-size: cover;
+}
+.img2-box:hover{
+    background-image: url("pictures/contact-hover.png");
+    background-size: cover;
+}
+.square{
+    display: flex;
+    flex-direction: row;
+}
+.bhromor{
+    width:65%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:1;
+    margin-top: 6vmin;;
+}
+.tittle{
+    height:20%
+}
+.bhromor a{
+    height:80%;
+    width: 100%;
+}
+.bhromor-img{
+    height:100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.bhromorimg{
+    justify-self: center;
+    height:100%;
+    width:75%;
+    background-image: url("pictures/bhromor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 35px;
+} 
+#context{
+    font-family:  "Boldonse", system-ui;;
+    font-size: 1.5rem;
+    margin: 35px 0px 15px 15px;
+}
+#gmail{
+    margin-left: 5vmin;
+    font-size: 2.5rem;
+    color: aqua;
+}
+#add{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    text-shadow: none; 
+    margin-left: 5vmin;
+}
+.social{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 10vmin;
+}
+.icon{
+    height:5vmin;
+    width:5vmin;
+}
+.icon i{
+    font-size: 3.5rem;;
+}
+.icon a{
+    color: inherit;
+}
+.quote{
+    font-family: "Montenegrin Gothic One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    text-shadow: none; 
+    margin: 50px 20px 10px 30px;;
+}
+#q-line2{
+    font-size: 1.5rem;
+    margin-left: 30vw;
+}
+
+@media (max-width: 1100px) {
+    .img2-box {
+        width:85vmin;
+        height:100vmin;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top:350px;
+        left:35px;  
+    }
+    .img2-box:hover {
+        width:85vmin;
+        height:100vmin;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top:350px;
+        left:35px;
+    }
+    .square{
+        flex-direction: column;
+    }
+    .contact-main {
+        flex-direction: column; 
+        height:100vmin;;
+    }
+    #gmail{
+        font-size: 1.5rem;
+    }
+    .address{
+        font-size: 1.5rem;
+    }
+    .social{
+        width:100vmin;
+        /* position: relative;
+        top:100px; */
+        margin-bottom:30px ;
+        display: flex;
+        justify-content: space-around;
+    }
+    .quote{
+        width:100vmin;
+        /* text-align: center; */
+        font-size: 1.5rem;
+        margin: 0px 0px 15px 30px;;
+    }
+    .icon i{
+        font-size: 1.8rem;
+    }
+    .bhromor{
+        width:100vmin;
+        height:200px;
+        padding: 0px;
+    }
+    .bhromorimg{
+        padding: 0px;
+    }
+    .alsovisit{
+        z-index: 0;
+    }
+}
