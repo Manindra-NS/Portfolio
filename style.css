@@ -45,7 +45,7 @@ body{
     width:40%;
 }
 .links{
-    position: fixed;
+    position: absolute;
     right: 8px;
     top: 30px;
     z-index: 1000;
@@ -136,7 +136,7 @@ body{
         top:580px;
     }
     .links{
-        position: fixed;
+        position: absolute;
         right: 8px;
         top:30px;
         z-index: 1000;
